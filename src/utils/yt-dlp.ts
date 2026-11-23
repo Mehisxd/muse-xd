@@ -323,11 +323,9 @@ const extractMedia = async (url: string, playlistLimit?: number, useYouTubeCooki
         '--no-warnings',
         '--no-cache-dir',
         '--js-runtimes',
-        'node',
+        'deno',
         '-f',
-        'bestaudio/best',
-        '-S',
-        'proto:https',
+        'best[protocol^=m3u8]/bestaudio/best',
       ];
 
       if (cookiesPath) {
